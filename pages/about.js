@@ -114,11 +114,6 @@ export default function About() {
                 We understand the local business environment, pricing expectations, and the practical constraints that come with building technology in an emerging market. We price our services accordingly.
               </p>
             </div>
-            <div className="mt-8">
-              <a href="mailto:hello@graceinspiredtech.com" className="text-gold font-medium text-sm hover:underline">
-                hello@graceinspiredtech.com
-              </a>
-            </div>
           </div>
         </div>
       </section>

@@ -143,13 +143,7 @@ export default function Layout({ children, title, description }) {
                   Helping founders and small businesses turn ideas into working digital products through clear planning, reliable setup, and practical technical support.
                 </p>
                 <div className="mt-6">
-                  <a
-                    href="mailto:hello@graceinspiredtech.com"
-                    className="text-gold text-sm hover:text-gold-light transition-colors duration-200"
-                  >
-                    hello@graceinspiredtech.com
-                  </a>
-                </div>
+                  </div>
               </div>
 
               {/* Services */}

@@ -55,7 +55,7 @@ export default function Start() {
       if (!res.ok) throw new Error('Submission failed')
       setSubmitted(true)
     } catch {
-      alert('Something went wrong. Please email us directly at hello@graceinspiredtech.com')
+      alert('Something went wrong. Please try again or contact us directly.')
     } finally {
       setLoading(false)
     }
@@ -94,11 +94,7 @@ export default function Start() {
                   Thank you for reaching out. We will review your project details and respond to <strong>{form.email}</strong> within one business day.
                 </p>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  If your request is urgent, you can also reach us directly at{' '}
-                  <a href="mailto:hello@graceinspiredtech.com" className="text-gold hover:underline">
-                    hello@graceinspiredtech.com
-                  </a>
-                  .
+                  If your request is urgent, use the intake form again or expect our response within one business day.
                 </p>
               </div>
             </div>
@@ -273,12 +269,6 @@ export default function Start() {
                     ))}
                   </div>
 
-                  <div className="border-t border-gray-200 mt-8 pt-6">
-                    <p className="text-gray-500 text-xs mb-2">Prefer to email directly?</p>
-                    <a href="mailto:hello@graceinspiredtech.com" className="text-gold text-xs font-medium hover:underline break-all">
-                      hello@graceinspiredtech.com
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
