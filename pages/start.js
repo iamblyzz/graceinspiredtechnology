@@ -104,7 +104,7 @@ export default function Start() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
               {/* Form */}
               <div className="lg:col-span-2">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} method="post" className="space-y-6">
                   {/* Name + Email */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
