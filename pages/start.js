@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import { useState } from 'react'
+import QuestionForm from '../components/QuestionForm'
 
 const services = [
   'AI App Blueprint — ₱4,999',
@@ -275,6 +276,8 @@ export default function Start() {
           )}
         </div>
       </section>
+
+      <QuestionForm />
     </Layout>
   )
 }

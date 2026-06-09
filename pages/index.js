@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import QuestionForm from '../components/QuestionForm'
 
 const services = [
   {
@@ -213,6 +214,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Question Form */}
+      <QuestionForm />
 
       {/* CTA */}
       <section className="bg-navy py-20">
