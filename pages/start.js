@@ -32,6 +32,7 @@ export default function Start() {
   const [form, setForm] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     service: '',
     budget: '',
@@ -134,18 +135,32 @@ export default function Start() {
                     </div>
                   </div>
 
-                  {/* Company */}
-                  <div>
-                    <label className="label-field" htmlFor="company">Company or Business Name</label>
-                    <input
-                      id="company"
-                      name="company"
-                      type="text"
-                      className="input-field"
-                      placeholder="Optional"
-                      value={form.company}
-                      onChange={handleChange}
-                    />
+                  {/* Phone + Company */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="label-field" htmlFor="phone">Phone Number</label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        className="input-field"
+                        placeholder="+63 9XX XXX XXXX"
+                        value={form.phone}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div>
+                      <label className="label-field" htmlFor="company">Company or Business Name</label>
+                      <input
+                        id="company"
+                        name="company"
+                        type="text"
+                        className="input-field"
+                        placeholder="Optional"
+                        value={form.company}
+                        onChange={handleChange}
+                      />
+                    </div>
                   </div>
 
                   {/* Service */}
