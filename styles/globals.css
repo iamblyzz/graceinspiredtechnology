@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-700 bg-white font-sans;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-navy font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-navy text-white px-7 py-3 text-sm font-medium tracking-wide transition-colors duration-200 hover:bg-navy-light;
+  }
+
+  .btn-outline {
+    @apply inline-block border border-navy text-navy px-7 py-3 text-sm font-medium tracking-wide transition-colors duration-200 hover:bg-navy hover:text-white;
+  }
+
+  .btn-gold {
+    @apply inline-block bg-gold text-navy px-7 py-3 text-sm font-semibold tracking-wide transition-colors duration-200 hover:bg-gold-light;
+  }
+
+  .section-label {
+    @apply text-gold text-xs font-semibold tracking-widest uppercase mb-3;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-semibold text-navy leading-tight;
+  }
+
+  .container-narrow {
+    @apply max-w-3xl mx-auto;
+  }
+
+  .divider-gold {
+    @apply w-10 h-0.5 bg-gold mt-4 mb-6;
+  }
+
+  .service-card {
+    @apply bg-white border border-gray-200 p-8 hover:border-gold transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full border border-gray-300 px-4 py-3 text-sm text-gray-700 focus:outline-none focus:border-navy transition-colors duration-200;
+  }
+
+  .label-field {
+    @apply block text-sm font-medium text-navy mb-1.5;
+  }
+}
