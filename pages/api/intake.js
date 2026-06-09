@@ -7,18 +7,16 @@ const DISCORD_WEBHOOK    = process.env.DISCORD_WEBHOOK_URL
 async function saveToAirtable({ name, email, phone, service, description, source }) {
   const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE)}`
 
-  const body = {
-    fields: {
-      Name:                name,
-      Email:               email,
-      Phone:               phone || '',
-      Service:             service,
-      'Project Description': description,
-      Source:              source || 'Website',
-      Status:              'New Lead',
-      'Date Created':      new Date().toISOString().split('T')[0], // YYYY-MM-DD
-    },
+  // Confirmed fields — match exact Airtable column names
+  const fields = {
+    Name:    name,
+    Email:   email,
+    Phone:   phone || '',
+    Service: service,
+    Notes:   description,
   }
+
+  const body = { fields }
 
   const res = await fetch(url, {
     method:  'POST',
