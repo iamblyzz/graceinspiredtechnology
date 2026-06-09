@@ -46,10 +46,19 @@ export default function Start() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    // Simulate submission — wire to API or Formspree in production
-    await new Promise((r) => setTimeout(r, 1000))
-    setSubmitted(true)
-    setLoading(false)
+    try {
+      const res = await fetch('/api/intake', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setSubmitted(true)
+    } catch {
+      alert('Something went wrong. Please email us directly at hello@graceinspiredtech.com')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
